@@ -350,7 +350,8 @@ Potential improvements include:
 ---
 
 ## Author
+Ivan Reyes
 
-**Racoon Nuit**
+collab w/ **Racoon Nuit**
 
 Software Engineering · Data Analysis · Machine Learning
