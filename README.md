@@ -10,11 +10,11 @@ Users can search by **movie title** or **actor**, and the application includes f
 
 ---
 
-## Demo
+## Live Demo
 
-> Live demo coming soon.
+Try the interactive application here
 
-![Movie Recommendation System](images/movie_search_result.png)
+https://movie-recommendation-ee8urdhqql7ncnrxl3wmyi.streamlit.app/
 
 ---
 
