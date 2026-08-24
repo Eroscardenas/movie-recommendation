@@ -1,0 +1,354 @@
+:root {
+    --bg: #0c0d10;
+    --panel: #121317;
+    --panel-soft: #17191f;
+    --border: #282a31;
+    --text: #f1f1f3;
+    --muted: #8e919b;
+    --accent: #8f1d3a;
+    --accent-hover: #a62649;
+}
+
+/* App */
+
+.stApp {
+    background: var(--bg);
+    color: var(--text);
+}
+
+.block-container {
+    max-width: 1180px;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+/* Header */
+
+.hero {
+    margin-bottom: 24px;
+    padding: 12px 0 26px;
+    border-bottom: 1px solid var(--border);
+}
+
+.hero-label,
+.section-label {
+    margin-bottom: 8px;
+    color: #c95673;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+}
+
+.hero h1 {
+    margin: 0 0 10px;
+    font-size: 2.65rem;
+    letter-spacing: -0.04em;
+}
+
+.hero-text {
+    max-width: 720px;
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+
+.hero-meta {
+    margin-top: 15px;
+    color: #b5b7bf;
+    font-size: 0.8rem;
+}
+
+.hero-note {
+    margin-top: 4px;
+    color: #62656d;
+    font-size: 0.74rem;
+}
+
+/* Headings */
+
+h1,
+h2,
+h3 {
+    color: var(--text);
+    letter-spacing: -0.025em;
+}
+
+.section-heading {
+    margin-top: 34px;
+    margin-bottom: 14px;
+}
+
+.section-heading h2 {
+    margin: 3px 0 4px;
+    font-size: 1.65rem;
+}
+
+.section-heading p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.84rem;
+}
+
+.compact-title {
+    margin-top: 2px;
+}
+
+/* Inputs */
+
+[data-testid="stTextInput"] input {
+    min-height: 44px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--panel-soft);
+    color: var(--text);
+}
+
+[data-testid="stTextInput"] input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px var(--accent);
+}
+
+[data-testid="stRadio"] {
+    padding-top: 2px;
+}
+
+/* Buttons */
+
+.stButton > button {
+    min-height: 42px;
+    padding: 0 18px;
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 700;
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.stButton > button:hover {
+    border-color: var(--accent-hover);
+    background: var(--accent-hover);
+    color: #fff;
+}
+
+/* Cards */
+
+[data-testid="stVerticalBlockBorderWrapper"] {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--panel);
+    box-shadow: none;
+}
+
+[data-testid="stVerticalBlockBorderWrapper"]
+[data-testid="stVerticalBlockBorderWrapper"] {
+    background: transparent;
+    box-shadow: none;
+}
+
+/* Horizontal recommendation row */
+
+[data-testid="stHorizontalBlock"] {
+    align-items: stretch;
+    gap: 14px;
+}
+
+[data-testid="stHorizontalBlock"]
+[data-testid="stVerticalBlockBorderWrapper"] {
+    height: 100%;
+}
+
+/* Metrics */
+
+[data-testid="stMetric"] {
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--panel-soft);
+}
+
+[data-testid="stMetricLabel"] {
+    color: var(--muted);
+    font-size: 0.74rem;
+}
+
+[data-testid="stMetricValue"] {
+    color: #d85a78;
+    font-size: 1.45rem;
+    font-weight: 700;
+}
+
+/* Recommendation card titles */
+
+[data-testid="stHorizontalBlock"] h3 {
+    min-height: 46px;
+    margin-top: 8px;
+    margin-bottom: 6px;
+    font-size: 1rem;
+    line-height: 1.25;
+}
+
+[data-testid="stHorizontalBlock"]
+[data-testid="stCaptionContainer"] {
+    font-size: 0.7rem;
+}
+
+/* Movie stats inside carousel cards */
+
+.movie-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin: 14px 0 12px;
+}
+
+.movie-stats > div {
+    min-width: 0;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--panel-soft);
+}
+
+.movie-stats span {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--muted);
+    font-size: 0.62rem;
+    letter-spacing: 0.05em;
+}
+
+.movie-stats strong {
+    display: block;
+    overflow: visible;
+    color: #d85a78;
+    font-size: 1.05rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* Images */
+
+[data-testid="stImage"] {
+    display: flex;
+    justify-content: center;
+}
+
+[data-testid="stImage"] img {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Progress */
+
+[data-testid="stProgress"] > div > div {
+    background: #202228;
+}
+
+[data-testid="stProgress"] > div > div > div {
+    background: var(--accent);
+}
+
+/* Alerts */
+
+[data-testid="stAlert"] {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+/* Charts */
+
+[data-testid="stVegaLiteChart"] {
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--panel);
+}
+
+/* Captions */
+
+[data-testid="stCaptionContainer"] {
+    color: var(--muted);
+}
+
+/* Dividers */
+
+hr {
+    margin: 2rem 0;
+    border-color: var(--border);
+}
+
+/* Streamlit chrome */
+
+[data-testid="stHeader"] {
+    background: transparent;
+}
+
+[data-testid="stToolbar"] {
+    opacity: 0.5;
+}
+
+/* Footer */
+
+.app-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 18px;
+    color: var(--muted);
+    font-size: 0.76rem;
+}
+
+.app-footer strong {
+    color: #d2d3d8;
+}
+
+.app-footer small {
+    color: #666971;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+    .block-container {
+        padding-top: 1.3rem;
+    }
+
+    .hero h1 {
+        font-size: 2.15rem;
+    }
+
+    [data-testid="stHorizontalBlock"] {
+        gap: 8px;
+    }
+
+    [data-testid="stMetric"] {
+        padding: 10px;
+    }
+
+    [data-testid="stMetricValue"] {
+        font-size: 1.2rem;
+    }
+
+    .movie-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero h1 {
+        font-size: 1.9rem;
+    }
+
+    .hero-text {
+        font-size: 0.9rem;
+    }
+
+    .section-heading h2 {
+        font-size: 1.4rem;
+    }
+}
